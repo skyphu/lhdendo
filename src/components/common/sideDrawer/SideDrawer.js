@@ -1,21 +1,19 @@
 import React from "react";
-import { withTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import "./navBar.css";
-import { DrawerToggleButton } from "./sideDrawer/DrawerToggleButton";
+import { withTranslation } from "react-i18next";
 
-const activeStyle = {
-  color: "#FFF",
-  backgroundColor: "",
-};
-function NavBar(props) {
+import "./sideDrawer.css";
+
+function SideDrawer(props) {
   const t = props.t;
+  let drawerClasses = "side-drawer";
+  if (props.show) {
+    drawerClasses = "side-drawer open";
+  }
+  const activeStyle = {};
   return (
-    <div className="topnav">
-      <div className="drawer-toggle">
-        <DrawerToggleButton click={props.click} />
-      </div>
-      <nav className="topnav-banner">
+    <>
+      <nav className={drawerClasses}>
         <ul>
           <li>
             <NavLink
@@ -39,8 +37,8 @@ function NavBar(props) {
           </li>
         </ul>
       </nav>
-    </div>
+    </>
   );
 }
 
-export default withTranslation()(NavBar);
+export default withTranslation()(SideDrawer);

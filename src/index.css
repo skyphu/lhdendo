@@ -1,16 +1,10 @@
-#app {
-  max-width: 850px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
 html {
   height: 100%;
 }
 
 body {
   background-image: url("./images/06.png");
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   height: 100%;
 }

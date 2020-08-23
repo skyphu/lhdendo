@@ -5,18 +5,38 @@
   background-color: #9c9bb5;
   padding: 0px 10px;
 }
-
-.nav-item {
-  padding: 0 5px;
+.topnav-banner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
-
 .topnav-banner ul {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
   display: flex;
+  align-items: center;
+  height: 100%;
+}
+.nav-item {
+  padding: 0 5px;
+  height: 100%;
+  color: #65467c;
+}
+.nav-item:hover {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+  text-decoration: none;
 }
 
-.topnav-banner li > * {
-  color: #65467c;
+@media (max-width: 768px) {
+  .topnav-banner li {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .drawer-toggle {
+    display: none;
+  }
 }

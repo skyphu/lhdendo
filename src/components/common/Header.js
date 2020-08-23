@@ -1,11 +1,12 @@
 import React from "react";
 import { withTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import logo from "../../images/lhd logo.png";
 import "./header.css";
 import NavBar from "./NavBar";
 
-function Header({ t }) {
+function Header(props) {
+  const t = props.t;
+
   return (
     <>
       <div className="jumbotron jumbotron-custom-bg mb-0 p-2">
@@ -16,11 +17,11 @@ function Header({ t }) {
           <div className="col p-5">
             <h1>Leticia Hernández Dávila, MD FACE</h1>
             <hr />
-            <p class="lead">{t("endocrinology")}</p>
+            <p className="lead">{t("endocrinology")}</p>
           </div>
         </div>
       </div>
-      <NavBar />
+      <NavBar click={props.drawerClickHandler} />
     </>
   );
 }
